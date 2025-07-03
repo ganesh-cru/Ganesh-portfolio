@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <style>
+    /* --- General Reset --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; }
+
+    /* --- Navbar --- */
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: #333; color: #fff; padding: 10px 20px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo { font-size: 1.5em; font-weight: bold; }
+    .menu { display: flex; list-style: none; }
+    .menu li { margin-left: 15px; }
+    .menu li a {
+      text-decoration: none; color: #fff;
+      transition: color .3s;
+    }
+    .menu li a:hover { color: #ddd; }
+    .menu-toggle { display: none; font-size: 1.5em; cursor: pointer; }
+
+    /* --- Sections --- */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .home {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #007BFF;
+      color: #fff;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background .3s;
+    }
+    .btn:hover { background: #0056b3; }
+
+    /* --- Skills --- */
+    .skill-chart { max-width: 600px; margin: 0 auto; }
+    .skill { margin-bottom: 15px; }
+    .bar {
+      background: #ddd; height: 20px;
+      border-radius: 10px; overflow: hidden;
+    }
+    .fill { height: 100%; border-radius: 10px; }
+    .fill.html { background: #e44d26; }
+    .fill.css { background: #264de4; }
+    .fill.js { background: #f0db4f; }
+    .fill.dsa { background: #bda508; }
+
+    /* --- Certifications --- */
+    .certs ul {
+      list-style: none;
+      margin: auto;
+      max-width: 600px;
+    }
+    .certs li {
+      background: #eee;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+    }
+
+    /* --- Projects --- */
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .project-item {
+      background: #fafafa;
+      padding: 18px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      transition: transform .3s;
+    }
+    .project-item:hover { transform: translateY(-5px); }
+    .project-item a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .project-item a:hover { text-decoration: underline; }
+
+    /* --- Contact Form --- */
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact input, .contact textarea {
+      margin-bottom: 12px;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact button {
+      padding: 12px;
+      font-size: 1em;
+      background: #28a745;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .3s;
+    }
+    .contact button:hover { background: #218838; }
+
+    /* --- Responsive Navbar --- */
+    @media(max-width: 768px) {
+      .menu { display: none; flex-direction: column; width: 100%; }
+      .menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Ganesh</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle">☰</div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home">
+    <h1>Hello, My Self Ganesh kumar singh</h1>
+    <p>I am a <span id="typing"></span></p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>"Aspiring BCA Student at KCCILHE, Affiliated with GGSIPU | Passionate About Technology & Software Development | Eager to Learn & Grow in the IT Field"</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skill-chart">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="bar"><div class="fill html" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="bar"><div class="fill css" style="width: 70%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="bar"><div class="fill js" style="width: 50%;"></div></div>
+      </div>
+       <div class="skill">
+        <span>DSA</span>
+        <div class="bar"><div class="fill dsa" style="width: 40%;"></div></div>
+      </div>
+      <div class="skill">
+        <span>Digital marketing </span>
+        <div class="bar"><div class="fill dsa" style="width: 30%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certs" class="certs">
+    <h2>Certifications</h2>
+    <ul>
+      <li><strong>Introduction to Deep Learning</strong> – Infosys Springboard, 2025</li>
+      <li><strong>Introduction to OpenAI GPT Models</strong> – Infosys Springboard, 2025</li>
+      <li><strong>Tata Group | Empowering Business with Effective Insights | </strong> – Virtual Internship – June 22nd, 2025   </li>
+      <li><strong>Accenture: Software Engineering </strong> –Job Simulation - June 2025 </li>
+      <li><strong>Mastercard: Cybersecurity</strong> –Job Simulation - June 2025 </li>
+       <li><strong>Fundamentals of digital marketing </strong> – United Latino Students Association - 2024</li>
+        <li><strong>Full Stack Developer</strong> – Simplilearn, 2024</li>      
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio to showcase my projects and certifications.</p>
+        <a href="#">View Project</a>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Ganesh Kumar Singh" required />
+      <input type="email" name="email" placeholder="ganeshkumar9043@gmail.com" required />
+      <input type="Mobile.No" name="number" placeholder="8929813706" required />
+      <button type="submit"></button>
+    </form>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle mobile menu
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      const menu = document.querySelector('.menu');
+      menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    });
+
+    // Typing effect for intro
+    const typingEl = document.getElementById('typing');
+    const words = ['Web Developer', 'Digital Marketier', 'Programmer'];
+    let idx = 0, letter = 0, forward = true;
+
+    function type() {
+      const current = words[idx];
+      typingEl.textContent = current.slice(0, letter);
+      if (forward) {
+        if (letter++ === current.length) forward = false;
+      } else {
+        if (letter-- === 0) {
+          forward = true;
+          idx = (idx + 1) % words.length;
+        }
+      }
+      setTimeout(type, 150);
+    }
+    type();
+
+    // Smooth scroll
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Contact form dummy handler
+    document.getElementById('contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert(`Thanks for reaching out, ${e.target.name.value}!`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
